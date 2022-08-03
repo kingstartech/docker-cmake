@@ -1,6 +1,7 @@
 ## Usage
 
 Example usage with a CMake project:
+
 ```shell
 docker run \
     -v $PWD:$PWD \
