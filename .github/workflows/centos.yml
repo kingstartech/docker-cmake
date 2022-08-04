@@ -1,4 +1,4 @@
-name: alpine-7
+name: centos-7
 
 on:
   push:
