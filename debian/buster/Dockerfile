@@ -1,5 +1,6 @@
 ARG DEBIAN_TAG=buster
 FROM debian:${DEBIAN_TAG}
 
-RUN apt-get update && apt-get upgrade -y
-RUN apt-get install -y gcc g++ make automake cmake
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
+RUN date -R && apt-get update
+RUN apt-get install -y gcc cmake build-essential git libssl-dev
