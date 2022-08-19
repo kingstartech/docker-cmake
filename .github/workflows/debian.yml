@@ -32,3 +32,11 @@ jobs:
           context: ./debian/buster/
           push: true
           tags: kingstartech/cmake:buster
+      -
+        name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          platforms: linux/amd64,linux/arm64/v8
+          context: ./debian/buster/
+          push: true
+          tags: kingstartech/cmake:10

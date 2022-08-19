@@ -1,4 +1,4 @@
-ARG DEBIAN_TAG=buster
+ARG DEBIAN_TAG=10
 FROM debian:${DEBIAN_TAG}
 
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
