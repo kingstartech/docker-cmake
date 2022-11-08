@@ -25,7 +25,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build and push
+        name: Build and push 10
         uses: docker/build-push-action@v3
         with:
           platforms: linux/amd64,linux/arm64/v8
@@ -33,7 +33,7 @@ jobs:
           push: true
           tags: kingstartech/cmake:10
       -
-        name: Build and push
+        name: Build and push 11
         uses: docker/build-push-action@v3
         with:
           platforms: linux/amd64,linux/arm64/v8

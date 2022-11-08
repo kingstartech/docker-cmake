@@ -25,10 +25,18 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build and push
+        name: Build and push 3.15
         uses: docker/build-push-action@v3
         with:
           platforms: linux/amd64,linux/arm64/v8
-          context: ./alpine/
+          context: ./alpine/3.15/
           push: true
-          tags: kingstartech/cmake:alpine
+          tags: kingstartech/cmake:alpine3.15
+      -
+        name: Build and push 3.16
+        uses: docker/build-push-action@v3
+        with:
+          platforms: linux/amd64,linux/arm64/v8
+          context: ./alpine/3.16/
+          push: true
+          tags: kingstartech/cmake:alpine3.16
