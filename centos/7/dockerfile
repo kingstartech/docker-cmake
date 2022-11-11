@@ -1,0 +1,6 @@
+FROM centos:7
+
+RUN yum -y install epel-release && yum update -y
+RUN yum install -y gcc gcc-c++ make automake build-essential cmake3 openssl-devel
+RUN ln -s /usr/bin/cmake3 /usr/bin/cmake
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime

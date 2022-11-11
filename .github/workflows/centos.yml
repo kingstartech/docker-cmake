@@ -1,4 +1,4 @@
-name: alpine
+name: debian-buster
 
 on:
   push:
@@ -25,18 +25,18 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build and push 3.15
+        name: Build and push 7
         uses: docker/build-push-action@v3
         with:
           platforms: linux/amd64,linux/arm64/v8
-          context: ./alpine/3.15/
+          context: ./centos/7/
           push: true
-          tags: kingstartech/cmake:alpine3.15
+          tags: kingstartech/cmake:centos7
       -
-        name: Build and push 3.16
+        name: Build and push 8
         uses: docker/build-push-action@v3
         with:
           platforms: linux/amd64,linux/arm64/v8
-          context: ./alpine/3.16/
+          context: ./centos/8/
           push: true
-          tags: kingstartech/cmake:alpine3.16
+          tags: kingstartech/cmake:centos8
