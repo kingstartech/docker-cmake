@@ -1,4 +1,4 @@
-name: debian-buster
+name: centos
 
 on:
   push:
@@ -32,11 +32,4 @@ jobs:
           context: ./centos/7/
           push: true
           tags: kingstartech/cmake:centos7
-      -
-        name: Build and push 8
-        uses: docker/build-push-action@v3
-        with:
-          platforms: linux/amd64,linux/arm64/v8
-          context: ./centos/8/
-          push: true
-          tags: kingstartech/cmake:centos8
+
