@@ -1,4 +1,4 @@
-name: debian-buster
+name: openeuler
 
 on:
   push:
@@ -25,18 +25,11 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
-        name: Build and push 10
+        name: Build and push 20
         uses: docker/build-push-action@v3
         with:
           platforms: linux/amd64,linux/arm64/v8
-          context: ./debian/10/
+          context: ./openeuler/20/
           push: true
-          tags: kingstartech/cmake:10
-      -
-        name: Build and push 11
-        uses: docker/build-push-action@v3
-        with:
-          platforms: linux/amd64,linux/arm64/v8
-          context: ./debian/11/
-          push: true
-          tags: kingstartech/cmake:11
+          tags: kingstartech/cmake:openeuler20
+
